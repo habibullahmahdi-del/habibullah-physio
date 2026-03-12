@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>হাবিবুল্লাহ | ফিজিওথেরাপিস্ট</title>
+  <meta name="description" content="হাবিবুল্লাহ - ফিজিওথেরাপিস্ট | Pediatric Rehabilitation, Neuro Rehab, Back Pain Treatment, Cerebral Palsy Therapy" />
+  <style>
+    :root{
+      --primary:#0d6efd;
+      --primary-dark:#084298;
+      --accent:#25D366;
+      --bg:#f5f9ff;
+      --text:#1f2937;
+      --muted:#6b7280;
+      --white:#ffffff;
+      --card-shadow:0 10px 30px rgba(13,110,253,0.10);
+      --radius:20px;
+      --max-width:1150px;
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+
+    img{
+      max-width:100%;
+      display:block;
+    }
+
+    a{
+      text-decoration:none;
+    }
+
+    .container{
+      width:min(var(--max-width), 92%);
+      margin:auto;
+    }
+
+    .section{
+      padding:80px 0;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:14px;
+      font-size:2rem;
+      color:var(--text);
+    }
+
+    .section-subtitle{
+      text-align:center;
+      color:var(--muted);
+      max-width:700px;
+      margin:0 auto 40px;
+    }
+
+    /* Navbar */
+    .navbar{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(255,255,255,0.92);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid rgba(0,0,0,0.06);
+    }
+
+    .nav-wrap{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:14px 0;
+      gap:20px;
+    }
+
+    .logo{
+      font-size:1.2rem;
+      font-weight:700;
+      color:var(--primary-dark);
+    }
+
+    .nav-links{
+      display:flex;
+      gap:22px;
+      flex-wrap:wrap;
+    }
+
+    .nav-links a{
+      color:var(--text);
+      font-weight:600;
+      font-size:0.95rem;
+    }
+
+    .nav-links a:hover{
+      color:var(--primary);
+    }
+
+    /* Hero */
+    .hero{
+      background:
+        linear-gradient(135deg, rgba(13,110,253,0.95), rgba(0,198,255,0.90)),
+        url("https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1400&q=80") center/cover no-repeat;
+      color:var(--white);
+      padding:90px 0 70px;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.2fr 0.9fr;
+      align-items:center;
+      gap:40px;
+    }
+
+    .hero h1{
+      font-size:2.8rem;
+      line-height:1.2;
+      margin-bottom:14px;
+    }
+
+    .hero p{
+      font-size:1.05rem;
+      max-width:620px;
+      opacity:0.95;
+      margin-bottom:24px;
+    }
+
+    .hero-badges{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-bottom:28px;
+    }
+
+    .badge{
+      background:rgba(255,255,255,0.16);
+      border:1px solid rgba(255,255,255,0.22);
+      padding:10px 14px;
+      border-radius:999px;
+      font-size:0.92rem;
+    }
+
+    .hero-btns{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      padding:13px 22px;
+      border-radius:999px;
+      font-weight:700;
+      transition:0.25s ease;
+      border:none;
+      cursor:pointer;
+    }
+
+    .btn-primary{
+      background:var(--white);
+      color:var(--primary-dark);
+    }
+
+    .btn-primary:hover{
+      transform:translateY(-2px);
+      box-shadow:0 10px 22px rgba(255,255,255,0.18);
+    }
+
+    .btn-outline{
+      color:var(--white);
+      border:1.5px solid rgba(255,255,255,0.65);
+      background:transparent;
+    }
+
+    .btn-outline:hover{
+      background:rgba(255,255,255,0.10);
+    }
+
+    .hero-card{
+      background:rgba(255,255,255,0.12);
+      border:1px solid rgba(255,255,255,0.18);
+      border-radius:28px;
+      padding:28px;
+      box-shadow:0 14px 40px rgba(0,0,0,0.14);
+      backdrop-filter:blur(10px);
+    }
+
+    .profile-wrap{
+      text-align:center;
+    }
+
+    .profile-img{
+      width:150px;
+      height:150px;
+      border-radius:50%;
+      object-fit:cover;
+      border:5px solid rgba(255,255,255,0.92);
+      margin:0 auto 16px;
+      background:#fff;
+    }
+
+    .profile-name{
+      font-size:1.5rem;
+      font-weight:700;
+      margin-bottom:6px;
+    }
+
+    .profile-role{
+      opacity:0.95;
+      margin-bottom:18px;
+    }
+
+    .mini-info{
+      display:grid;
+      gap:10px;
+      text-align:left;
+      font-size:0.96rem;
+    }
+
+    .mini-info div{
+      background:rgba(255,255,255,0.12);
+      padding:12px 14px;
+      border-radius:14px;
+    }
+
+    /* Stats */
+    .stats{
+      margin-top:-35px;
+      position:relative;
+      z-index:2;
+    }
+
+    .stats-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+    }
+
+    .stat-card{
+      background:var(--white);
+      border-radius:18px;
+      padding:24px 18px;
+      text-align:center;
+      box-shadow:var(--card-shadow);
+    }
+
+    .stat-card h3{
+      font-size:1.8rem;
+      color:var(--primary);
+      margin-bottom:5px;
+    }
+
+    .stat-card p{
+      color:var(--muted);
+      font-size:0.95rem;
+    }
+
+    /* About */
+    .about-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:28px;
+      align-items:start;
+    }
+
+    .card{
+      background:var(--white);
+      border-radius:var(--radius);
+      padding:28px;
+      box-shadow:var(--card-shadow);
+    }
+
+    .card h3{
+      margin-bottom:12px;
+      color:var(--primary-dark);
+    }
+
+    .list{
+      display:grid;
+      gap:12px;
+      margin-top:12px;
+    }
+
+    .list li{
+      list-style:none;
+      padding-left:18px;
+      position:relative;
+      color:#374151;
+    }
+
+    .list li::before{
+      content:"✓";
+      position:absolute;
+      left:0;
+      color:var(--primary);
+      font-weight:700;
+    }
+
+    /* Services */
+    .services-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:20px;
+    }
+
+    .service-card{
+      background:var(--white);
+      border-radius:22px;
+      padding:24px;
+      box-shadow:var(--card-shadow);
+      transition:0.25s ease;
+    }
+
+    .service-card:hover{
+      transform:translateY(-6px);
+    }
+
+    .icon{
+      width:52px;
+      height:52px;
+      border-radius:14px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:1.4rem;
+      background:#eaf2ff;
+      margin-bottom:16px;
+    }
+
+    .service-card h3{
+      font-size:1.08rem;
+      margin-bottom:10px;
+      color:var(--primary-dark);
+    }
+
+    .service-card p{
+      color:var(--muted);
+      font-size:0.95rem;
+    }
+
+    /* Why choose */
+    .why-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+    }
+
+    .why-item{
+      background:var(--white);
+      padding:24px;
+      border-radius:20px;
+      box-shadow:var(--card-shadow);
+    }
+
+    .why-item h4{
+      margin-bottom:10px;
+      color:var(--primary-dark);
+    }
+
+    .why-item p{
+      color:var(--muted);
+      font-size:0.95rem;
+    }
+
+    /* Appointment */
+    .appointment-wrap{
+      display:grid;
+      grid-template-columns:0.95fr 1.05fr;
+      gap:28px;
+      align-items:start;
+    }
+
+    .contact-box{
+      background:linear-gradient(135deg, #0d6efd, #2f89ff);
+      color:var(--white);
+      border-radius:24px;
+      padding:28px;
+      box-shadow:var(--card-shadow);
+    }
+
+    .contact-box h3{
+      margin-bottom:12px;
+      font-size:1.4rem;
+    }
+
+    .contact-box p{
+      opacity:0.96;
+      margin-bottom:18px;
+    }
+
+    .contact-line{
+      margin-bottom:12px;
+      padding:12px 14px;
+      background:rgba(255,255,255,0.12);
+      border-radius:14px;
+    }
+
+    .form-card{
+      background:var(--white);
+      border-radius:24px;
+      padding:28px;
+      box-shadow:var(--card-shadow);
+    }
+
+    .form-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:16px;
+    }
+
+    .input-group{
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+      margin-bottom:16px;
+    }
+
+    .input-group label{
+      font-weight:600;
+      color:#374151;
+    }
+
+    .input-group input,
+    .input-group select,
+    .input-group textarea{
+      width:100%;
+      padding:14px 15px;
+      border:1px solid #dbe4f0;
+      border-radius:14px;
+      outline:none;
+      font-size:0.96rem;
+      background:#fbfdff;
+    }
+
+    .input-group input:focus,
+    .input-group select:focus,
+    .input-group textarea:focus{
+      border-color:#86b7fe;
+      box-shadow:0 0 0 4px rgba(13,110,253,0.10);
+    }
+
+    textarea{
+      min-height:120px;
+      resize:vertical;
+    }
+
+    .full{
+      grid-column:1/-1;
+    }
+
+    .btn-submit{
+      width:100%;
+      background:var(--primary);
+      color:var(--white);
+      font-size:1rem;
+    }
+
+    .btn-submit:hover{
+      background:var(--primary-dark);
+    }
+
+    /* Testimonials */
+    .testimonial-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+    }
+
+    .testimonial{
+      background:var(--white);
+      border-radius:20px;
+      padding:24px;
+      box-shadow:var(--card-shadow);
+    }
+
+    .stars{
+      color:#f59e0b;
+      font-size:1.05rem;
+      margin-bottom:10px;
+    }
+
+    .testimonial p{
+      color:var(--muted);
+      margin-bottom:14px;
+    }
+
+    .testimonial strong{
+      color:var(--text);
+    }
+
+    /* FAQ */
+    .faq{
+      max-width:850px;
+      margin:0 auto;
+      display:grid;
+      gap:14px;
+    }
+
+    details{
+      background:var(--white);
+      border-radius:18px;
+      padding:18px 20px;
+      box-shadow:var(--card-shadow);
+    }
+
+    summary{
+      cursor:pointer;
+      font-weight:700;
+      color:var(--primary-dark);
+    }
+
+    details p{
+      margin-top:12px;
+      color:var(--muted);
+    }
+
+    /* Footer */
+    .footer{
+      background:#0f172a;
+      color:#dbe4f0;
+      padding:60px 0 25px;
+      margin-top:20px;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1.1fr 0.9fr 0.9fr;
+      gap:24px;
+      margin-bottom:30px;
+    }
+
+    .footer h3,
+    .footer h4{
+      color:#fff;
+      margin-bottom:12px;
+    }
+
+    .footer p,
+    .footer li,
+    .footer a{
+      color:#cbd5e1;
+      font-size:0.95rem;
+    }
+
+    .footer ul{
+      display:grid;
+      gap:10px;
+      padding-left:0;
+    }
+
+    .footer li{
+      list-style:none;
+    }
+
+    .copyright{
+      text-align:center;
+      padding-top:22px;
+      border-top:1px solid rgba(255,255,255,0.08);
+      font-size:0.92rem;
+      color:#94a3b8;
+    }
+
+    /* Floating buttons */
+    .floating-wrap{
+      position:fixed;
+      right:16px;
+      bottom:16px;
+      display:grid;
+      gap:12px;
+      z-index:999;
+    }
+
+    .float-btn{
+      width:56px;
+      height:56px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      font-size:1.25rem;
+      box-shadow:0 10px 24px rgba(0,0,0,0.18);
+    }
+
+    .float-call{ background:var(--primary); }
+    .float-wa{ background:var(--accent); }
+
+    /* Responsive */
+    @media (max-width: 992px){
+      .hero-grid,
+      .about-grid,
+      .appointment-wrap,
+      .footer-grid{
+        grid-template-columns:1fr;
+      }
+
+      .services-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .why-grid,
+      .testimonial-grid,
+      .stats-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .hero h1{
+        font-size:2.2rem;
+      }
+    }
+
+    @media (max-width: 640px){
+      .nav-wrap{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      .nav-links{
+        gap:14px;
+      }
+
+      .hero{
+        padding:70px 0 55px;
+      }
+
+      .hero h1{
+        font-size:1.9rem;
+      }
+
+      .services-grid,
+      .why-grid,
+      .testimonial-grid,
+      .stats-grid,
+      .form-grid{
+        grid-template-columns:1fr;
+      }
+
+      .section{
+        padding:65px 0;
+      }
+
+      .section-title{
+        font-size:1.7rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container nav-wrap">
+      <div class="logo">Habibullah Physiotherapy</div>
+      <nav class="nav-links">
+        <a href="#about">আমার সম্পর্কে</a>
+        <a href="#services">সেবা</a>
+        <a href="#appointment">অ্যাপয়েন্টমেন্ট</a>
+        <a href="#reviews">রিভিউ</a>
+        <a href="#faq">প্রশ্নোত্তর</a>
+        <a href="#contact">যোগাযোগ</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <h1>আপনার সুস্থ চলাফেরা, আরাম এবং পুনর্বাসনের জন্য বিশ্বস্ত ফিজিওথেরাপি সেবা</h1>
+        <p>
+          আমি হাবিবুল্লাহ, একজন ফিজিওথেরাপিস্ট। Pediatric Rehabilitation, Neuro Rehabilitation,
+          Cerebral Palsy Management এবং Back Pain Care নিয়ে কাজ করি।
+        </p>
+
+        <div class="hero-badges">
+          <div class="badge">পেডিয়াট্রিক রিহ্যাব</div>
+          <div class="badge">নিউরো রিহ্যাব</div>
+          <div class="badge">ব্যাক পেইন কেয়ার</div>
+          <div class="badge">পেশেন্ট-ফোকাসড ট্রিটমেন্ট</div>
+        </div>
+
+        <div class="hero-btns">
+          <a class="btn btn-primary" href="#appointment">📅 অ্যাপয়েন্টমেন্ট নিন</a>
+          <a class="btn btn-outline" href="https://wa.me/8801842739654" target="_blank">💬 WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="profile-wrap">
+          <img src="habib.jpg" alt="হাবিবুল্লাহ" class="profile-img">
+          <div class="profile-name">হাবিবুল্লাহ</div>
+          <div class="profile-role">ফিজিওথেরাপিস্ট</div>
+        </div>
+
+        <div class="mini-info">
+          <div><strong>📍 অবস্থান:</strong> খুলনা, বাংলাদেশ</div>
+          <div><strong>🎓 শিক্ষা:</strong> BPT | MPT (Pediatrics - Running)</div>
+          <div><strong>🩺 ফোকাস:</strong> CP, Pediatric Rehab, Neuro Rehab</div>
+          <div><strong>📞 ফোন:</strong> 01842-739654</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <h3>2+</h3>
+          <p>বছরের অভিজ্ঞতা</p>
+        </div>
+        <div class="stat-card">
+          <h3>9</h3>
+          <p>প্রতিদিন রোগী সেবা</p>
+        </div>
+        <div class="stat-card">
+          <h3>4</h3>
+          <p>মূল সেবা বিভাগ</p>
+        </div>
+        <div class="stat-card">
+          <h3>100%</h3>
+          <p>পেশেন্ট-কেন্দ্রিক যত্ন</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="section-title">আমার সম্পর্কে</h2>
+      <p class="section-subtitle">
+        আমি এমন একটি ফিজিওথেরাপি সেবা দিতে চাই, যেখানে রোগীর সমস্যা, কার্যক্ষমতা এবং জীবনের মান—
+        সবকিছুকে গুরুত্ব দিয়ে চিকিৎসা পরিকল্পনা করা হয়।
+      </p>
+
+      <div class="about-grid">
+        <div class="card">
+          <h3>Professional Profile</h3>
+          <p>
+            আমি একজন ফিজিওথেরাপিস্ট হিসেবে শিশু পুনর্বাসন, নিউরোলজিক্যাল কন্ডিশন এবং
+            ফাংশনাল রিকভারি নিয়ে কাজ করি। আমার লক্ষ্য হলো রোগীকে শুধু ব্যথামুক্ত করা নয়,
+            বরং তাদের দৈনন্দিন কার্যক্ষমতা উন্নত করা।
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>যে বিষয়গুলোতে আমি গুরুত্ব দিই</h3>
+          <ul class="list">
+            <li>ব্যক্তিভিত্তিক assessment ও treatment plan</li>
+            <li>Evidence-informed rehabilitation approach</li>
+            <li>শিশু ও অভিভাবক-কেন্দ্রিক থেরাপি</li>
+            <li>দীর্ঘমেয়াদি functional improvement</li>
+            <li>সুন্দর communication এবং follow-up</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="services">
+    <div class="container">
+      <h2 class="section-title">আমার সেবাসমূহ</h2>
+      <p class="section-subtitle">
+        রোগীর বয়স, সমস্যা এবং functional goals অনুযায়ী চিকিৎসা পরিকল্পনা করা হয়।
+      </p>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="icon">🧒</div>
+          <h3>Pediatric Physiotherapy</h3>
+          <p>শিশুদের মোটর ডেভেলপমেন্ট, posture, balance এবং movement skill উন্নয়নে সহায়তা।</p>
+        </div>
+
+        <div class="service-card">
+          <div class="icon">🧠</div>
+          <h3>Cerebral Palsy Management</h3>
+          <p>CP শিশুর জন্য functional training, positioning, mobility এবং caregiver guidance।</p>
+        </div>
+
+        <div class="service-card">
+          <div class="icon">♿</div>
+          <h3>Neuro Rehabilitation</h3>
+          <p>Stroke, nerve injury এবং neurological condition-এর ক্ষেত্রে movement recovery সহায়তা।</p>
+        </div>
+
+        <div class="service-card">
+          <div class="icon">🦴</div>
+          <h3>Back & Neck Pain Care</h3>
+          <p>কোমর ও ঘাড় ব্যথার জন্য assessment-based physiotherapy care এবং advice।</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">কেন আমাকে বেছে নেবেন</h2>
+      <p class="section-subtitle">
+        শুধু থেরাপি নয়, আমি চেষ্টা করি রোগী এবং পরিবারের জন্য একটি পরিষ্কার ও বিশ্বাসযোগ্য rehabilitation experience দিতে।
+      </p>
+
+      <div class="why-grid">
+        <div class="why-item">
+          <h4>ব্যক্তিগত যত্ন</h4>
+          <p>প্রতিটি রোগীর সমস্যা অনুযায়ী আলাদা assessment এবং treatment planning করা হয়।</p>
+        </div>
+        <div class="why-item">
+          <h4>শিশু-কেন্দ্রিক পদ্ধতি</h4>
+          <p>পেডিয়াট্রিক কেসে child-friendly handling এবং family guidance-কে অগ্রাধিকার দেওয়া হয়।</p>
+        </div>
+        <div class="why-item">
+          <h4>Practical Rehabilitation</h4>
+          <p>বাস্তব জীবনে movement, function এবং independence উন্নয়নকে গুরুত্ব দেওয়া হয়।</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="appointment">
+    <div class="container">
+      <h2 class="section-title">অ্যাপয়েন্টমেন্ট বুক করুন</h2>
+      <p class="section-subtitle">
+        নিচের ফর্ম পূরণ করলে WhatsApp-এ আপনার appointment request তৈরি হয়ে যাবে।
+      </p>
+
+      <div class="appointment-wrap">
+        <div class="contact-box">
+          <h3>যোগাযোগ করুন</h3>
+          <p>রোগীর সমস্যা, বয়স এবং প্রয়োজন অনুযায়ী সময় নির্ধারণ করা হবে।</p>
+
+          <div class="contact-line"><strong>📞 ফোন:</strong> 01842-739654</div>
+          <div class="contact-line"><strong>💬 WhatsApp:</strong> 01842-739654</div>
+          <div class="contact-line"><strong>📍 Location:</strong> খুলনা, বাংলাদেশ</div>
+          <div class="contact-line"><strong>🕒 সময়:</strong> পূর্ব নির্ধারিত অ্যাপয়েন্টমেন্ট অনুযায়ী</div>
+        </div>
+
+        <div class="form-card">
+          <form onsubmit="sendToWhatsApp(); return false;">
+            <div class="form-grid">
+              <div class="input-group">
+                <label for="name">নাম</label>
+                <input type="text" id="name" placeholder="আপনার নাম লিখুন" required>
+              </div>
+
+              <div class="input-group">
+                <label for="phone">মোবাইল নম্বর</label>
+                <input type="tel" id="phone" placeholder="আপনার মোবাইল নম্বর" required>
+              </div>
+
+              <div class="input-group">
+                <label for="age">বয়স</label>
+                <input type="text" id="age" placeholder="যেমন: 8 / 35">
+              </div>
+
+              <div class="input-group">
+                <label for="service">সেবা নির্বাচন করুন</label>
+                <select id="service">
+                  <option value="Pediatric Physiotherapy">Pediatric Physiotherapy</option>
+                  <option value="Cerebral Palsy Management">Cerebral Palsy Management</option>
+                  <option value="Neuro Rehabilitation">Neuro Rehabilitation</option>
+                  <option value="Back & Neck Pain Care">Back & Neck Pain Care</option>
+                </select>
+              </div>
+
+              <div class="input-group full">
+                <label for="problem">সমস্যার বিবরণ</label>
+                <textarea id="problem" placeholder="রোগীর সমস্যা সংক্ষেপে লিখুন"></textarea>
+              </div>
+
+              <div class="input-group full">
+                <button type="submit" class="btn btn-submit">WhatsApp এ Request পাঠান</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="reviews">
+    <div class="container">
+      <h2 class="section-title">রোগীর মতামত</h2>
+      <p class="section-subtitle">
+        নিচের রিভিউগুলো demo content। পরে আপনি আসল রোগীর মতামত এখানে বসাতে পারবেন।
+      </p>
+
+      <div class="testimonial-grid">
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p>খুব যত্ন নিয়ে থেরাপি করেছেন। সমস্যা বুঝিয়ে বলেছেন এবং অনেক ভালো ব্যবহার করেছেন।</p>
+          <strong>— রোগীর অভিভাবক</strong>
+        </div>
+
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p>আমার বাচ্চার movement আগের চেয়ে অনেক ভালো হয়েছে। নিয়মিত follow-up খুব সাহায্য করেছে।</p>
+          <strong>— Pediatric case family</strong>
+        </div>
+
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p>কোমর ব্যথার জন্য assessment-based advice এবং therapy খুব উপকার দিয়েছে।</p>
+          <strong>— Adult patient</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="container">
+      <h2 class="section-title">সাধারণ প্রশ্ন</h2>
+      <p class="section-subtitle">
+        রোগীরা সাধারণত যে প্রশ্নগুলো বেশি করে থাকেন।
+      </p>
+
+      <div class="faq">
+        <details>
+          <summary>ফিজিওথেরাপির আগে কী নিয়ে আসতে হবে?</summary>
+          <p>পূর্বের রিপোর্ট, প্রেসক্রিপশন, স্ক্যান রিপোর্ট বা যে কোনো relevant medical paper সঙ্গে আনলে ভালো হয়।</p>
+        </details>
+
+        <details>
+          <summary>শিশুর ক্ষেত্রে অভিভাবক কি সাথে থাকতে পারবেন?</summary>
+          <p>হ্যাঁ, অবশ্যই। Pediatric case-এ caregiver education খুব গুরুত্বপূর্ণ, তাই অভিভাবকের উপস্থিতি উপকারী।</p>
+        </details>
+
+        <details>
+          <summary>Appointment ছাড়া আসা যাবে?</summary>
+          <p>আগে থেকে অ্যাপয়েন্টমেন্ট নিলে সময়মতো দেখা এবং সেবা দেওয়া সহজ হয়।</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>Habibullah Physiotherapy</h3>
+          <p>
+            Professional physiotherapy care for pediatric rehabilitation, neuro rehabilitation,
+            cerebral palsy management and pain care.
+          </p>
+        </div>
+
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#about">আমার সম্পর্কে</a></li>
+            <li><a href="#services">সেবা</a></li>
+            <li><a href="#appointment">অ্যাপয়েন্টমেন্ট</a></li>
+            <li><a href="#reviews">রিভিউ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>যোগাযোগ</h4>
+          <ul>
+            <li>📞 01842-739654</li>
+            <li>📍 খুলনা, বাংলাদেশ</li>
+            <li>💬 WhatsApp available</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="copyright">
+        © 2026 Habibullah Physiotherapy. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <div class="floating-wrap">
+    <a class="float-btn float-call" href="tel:01842739654" title="Call">📞</a>
+    <a class="float-btn float-wa" href="https://wa.me/8801842739654" target="_blank" title="WhatsApp">💬</a>
+  </div>
+
+  <script>
+    function sendToWhatsApp(){
+      const name = document.getElementById("name").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const age = document.getElementById("age").value.trim();
+      const service = document.getElementById("service").value;
+      const problem = document.getElementById("problem").value.trim();
+
+      const message =
+        "Appointment Request%0A" +
+        "------------------------%0A" +
+        "নাম: " + encodeURIComponent(name) + "%0A" +
+        "মোবাইল: " + encodeURIComponent(phone) + "%0A" +
+        "বয়স: " + encodeURIComponent(age) + "%0A" +
+        "সেবা: " + encodeURIComponent(service) + "%0A" +
+        "সমস্যা: " + encodeURIComponent(problem);
+
+      window.open("https://wa.me/8801842739654?text=" + message, "_blank");
+    }
+  </script>
+
+</body>
+</html>
